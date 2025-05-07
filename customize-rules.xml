@@ -1,0 +1,44 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<ruleset name="Custom Rules"-->
+<!--         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"-->
+<!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">-->
+
+<!--    <description>-->
+<!--        This is a custom PMD ruleset that includes LoC, CC, WMC, CBO, and LCOM checks.-->
+<!--    </description>-->
+
+<!--    <rule ref="category/java/errorprone.xml">-->
+<!--        <exclude name="EmptyCatchBlock"/>-->
+<!--    </rule>-->
+
+<!--    &lt;!&ndash; Lines of Code (LoC) &ndash;&gt;-->
+<!--&lt;!&ndash;    <rule ref="category/java/CodeSize.xml/TooManyLines"/>&ndash;&gt;-->
+<!--    <rule ref="category/java/design.xml/NcssCount" />-->
+
+<!--    &lt;!&ndash; Cyclomatic Complexity (CC) &ndash;&gt;-->
+<!--    <rule ref="category/java/design.xml/CyclomaticComplexity"/>-->
+
+<!--    &lt;!&ndash; Weighted Methods per Class (WMC) &ndash;&gt;-->
+<!--    <rule ref="category/java/design.xml/TooManyMethods" />-->
+
+<!--    &lt;!&ndash; Coupling Between Objects (CBO) &ndash;&gt;-->
+<!--    <rule ref="category/java/design.xml/CouplingBetweenObjects"/>-->
+
+<!--    &lt;!&ndash; Lack of Cohesion in Methods (LCOM) &ndash;&gt;-->
+<!--&lt;!&ndash;    <rule ref="category/java/design.xml/LackOfCohesionOfMethods"/>&ndash;&gt;-->
+<!--    <rule ref="category/java/design.xml/GodClass" />-->
+
+<!--</ruleset>-->
+
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Custom Rules"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+<description> Custom ruleset for LoC, CC, WMC, CBO, and LCOM </description>
+<!--     <rule ref="category/java/design.xml/ExcessiveMethodLength"/> -->
+<rule ref="category/java/design.xml/NcssCount"/>
+<rule ref="category/java/design.xml/CyclomaticComplexity"/>
+<rule ref="category/java/design.xml/GodClass"/>
+<rule ref="category/java/design.xml/CouplingBetweenObjects"/>
+</ruleset>
